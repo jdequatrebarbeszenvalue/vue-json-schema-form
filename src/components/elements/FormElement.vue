@@ -13,6 +13,7 @@ import CheckboxGroupElement from '@/components/elements/CheckboxGroupElement'
 import RadioButtonElement from '@/components/elements/RadioButtonElement'
 import FormElementMultiple from '@/components/elements/FormElementMultiple'
 import DatePickerElement from '@/components/elements/DatePickerElement'
+import InputImageElement from '@/components/elements/InputImageElement'
 
 export default {
   name: 'FormElement',
@@ -28,6 +29,10 @@ export default {
         // currently only textarea is supported
         if (this.schema.widget === 'textarea') {
           component = TextareaElement
+        }
+        // possibility to load an image in base64
+        if (this.schema.widget === 'img') {
+          component = InputImageElement
         }
       } else if (this.schema.anyOf !== undefined) {
         component = RadioButtonElement

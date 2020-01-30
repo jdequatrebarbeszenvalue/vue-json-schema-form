@@ -1,11 +1,6 @@
 {
   "name": "vue-json-schema-form",
   "main": "./dist/vue-json-schema-form.umd.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/crickford/vue-json-schema-form.git"
-  },
-  "homepage": "https://github.com/crickford/vue-json-schema-form",
   "files": [
     "dist/*",
     "src/*",
@@ -23,7 +18,8 @@
   },
   "dependencies": {
     "ajv": "^6.5.4",
-    "json-pointer": "^0.6.0"
+    "json-pointer": "^0.6.0",
+    "vue-base64-file-upload": "^1.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
