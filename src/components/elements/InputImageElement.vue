@@ -1,40 +1,52 @@
 <template>
-  <b-field :label="schema.title">
-      <vue-base64-file-upload 
-        class="v1"
-        accept="image/png,image/jpeg,image/gif,image/jpg"
-        image-class="v1-image"
-        input-class="v1-input"
-        :max-size="customImageMaxSize"
-        :default-preview="value"
-        :value="value"
-        @load="onLoad"
-      />
+  <b-field class="file" :label="schema.title">
+      <b-upload v-model="file" @input="onLoad" accept="image/png, image/jpeg, image/gif, image/jpg">
+        <img :src="preview || value">
+        <b-field v-if="file" :message="file.name"></b-field>
+        <a class="button">
+          <span> Click to upload </span>
+        </a>
+      </b-upload>
   </b-field>
 </template>
 
 <script>
 
-import VueBase64FileUpload from 'vue-base64-file-upload';
-
 export default {
   name: 'InputImageElement',
-  components: {
-    VueBase64FileUpload,
-  }, 
   props: [
     'schema',
     'value'
   ], 
   data(){
     return{
-      customImageMaxSize: 2
+      file: null,
+      preview: "",
+      maxSize: 2,
     }
   },
   methods:{
-    onLoad(dataUri) {
-      this.$emit( 'input', dataUri );
-    },
-  }
-}
+    onLoad(evt){ 
+      if ( evt.size/ Math.pow(1000, 2) > this.maxSize ){
+           this.file    = null; 
+           this.preview = null;
+           return false
+      }
+
+      let reader = new FileReader()
+          reader.readAsDataURL(this.file)
+          reader.onload  = evt => {
+            this.preview = reader.result
+            this.$emit('input', reader.result )      
+          }    
+    }, 
+  }, 
+}            
+
 </script>
+
+<style scoped>
+  .field{
+    display:block;
+  }
+</style>

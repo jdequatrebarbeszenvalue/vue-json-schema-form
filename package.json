@@ -18,8 +18,7 @@
   },
   "dependencies": {
     "ajv": "^6.5.4",
-    "json-pointer": "^0.6.0",
-    "vue-base64-file-upload": "^1.0.4"
+    "json-pointer": "^0.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
