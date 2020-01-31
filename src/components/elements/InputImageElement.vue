@@ -35,7 +35,7 @@ export default {
 
       let reader = new FileReader()
           reader.readAsDataURL(this.file)
-          reader.onload  = evt => {
+          reader.onload  = ( /*evt*/ ) => {
             this.preview = reader.result
             this.$emit('input', reader.result )      
           }    

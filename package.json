@@ -7,11 +7,12 @@
     "*.json",
     "*.js"
   ],
-  "version": "1.0.4",
+  "version": "1.0.4a",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "release": "vue-cli-service build --target lib ./src/components/index.js ",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
