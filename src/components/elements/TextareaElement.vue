@@ -1,7 +1,8 @@
 <template>
   <b-field :label="schema.title" :message="schema.description">
-    <b-input type="textarea" :minlength="schema.minLength" :maxlength="schema.maxLength" :value="value" @input="$emit('input', $event)">
-    </b-input>
+    <b-form-textarea :minlength="schema.minLength" :maxlength="schema.maxLength" :value="value" 
+    @input="$emit('input', $event)">
+    </b-form-textarea>
   </b-field>
 </template>
 
@@ -11,6 +12,6 @@ export default {
   props: [
     'schema',
     'value'
-  ]
+  ],
 }
 </script>
