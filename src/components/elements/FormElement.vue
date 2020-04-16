@@ -14,6 +14,7 @@ import RadioButtonElement from '@/components/elements/RadioButtonElement'
 import FormElementMultiple from '@/components/elements/FormElementMultiple'
 import DatePickerElement from '@/components/elements/DatePickerElement'
 import InputImageElement from '@/components/elements/InputImageElement'
+import InputJsonFile from '@/components/elements/InputJsonFile'
 
 export default {
   name: 'FormElement',
@@ -25,15 +26,22 @@ export default {
     type() {
       let component = TextElement
       if (this.schema.widget !== undefined) {
+
         // allow the schema to specify widget
         // currently only textarea is supported
         if (this.schema.widget === 'textarea') {
           component = TextareaElement
         }
+
         // possibility to load an image in base64
         if (this.schema.widget === 'img') {
           component = InputImageElement
         }
+
+        if (this.schema.widget === 'json') {
+          component = InputJsonFile
+        }
+
       } else if (this.schema.anyOf !== undefined) {
         component = RadioButtonElement
       } else if (this.schema.enum !== undefined) {
