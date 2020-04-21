@@ -52,13 +52,20 @@ export default {
   },
   data () {
     return {
+      debug: {},
       items: (this.value !== undefined) ? this.value : scaffoldFromSchema(this.schema),
       activeErrorMessages: [],
     }
   },
   watch: {
     schema() {
-      this.items = scaffoldFromSchema(this.schema)
+      // this.items = scaffoldFromSchema(this.schema)
+      this.debug = {
+        items: Object.assign( {}, this.items ),
+        scalffold: Object.assign( {}, scaffoldFromSchema( this.schema )),
+        deepMerge: Object.assign( {}, deepMerge( scaffoldFromSchema( this.schema ), this.items )),
+      };
+      this.items = deepMerge( scaffoldFromSchema( this.schema ), this.items ) 
       ajv = new Ajv({allErrors: true, jsonPointers: true, format: 'full'})
     }
   },
