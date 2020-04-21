@@ -114,11 +114,6 @@ export default {
             "description": "Age in years which must be equal to or greater than zero.",
             "type": "integer",
             "minimum": 0
-          },
-          "jsonFile": {
-            "title": "JSON file",
-            "type": "file",
-            "widget": "json"
           }
         },
         "required": [

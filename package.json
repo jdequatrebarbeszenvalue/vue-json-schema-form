@@ -7,7 +7,7 @@
     "*.json",
     "*.js"
   ],
-  "version": "1.0.4a",
+  "version": "1.0.5",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",

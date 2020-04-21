@@ -28,7 +28,7 @@
 import Ajv from 'ajv'
 import JSONPointer from 'json-pointer'
 import FormElement from '@/components/elements/FormElement'
-import { scaffoldFromSchema, pruneEmptyMembers } from '@/utility/json-schema-helpers'
+import { scaffoldFromSchema, pruneEmptyMembers, deepMerge } from '@/utility/json-schema-helpers'
 
 let ajv = new Ajv({allErrors: true, jsonPointers: true, format: 'full'})
 
@@ -66,7 +66,8 @@ export default {
     submit() {
       if (this.validate()) {
         this.activeErrorMessages = []
-        this.$emit('input', pruneEmptyMembers(this.items))
+        let dataMerge = deepMerge( scaffoldFromSchema( this.schema ), this.items ) 
+        this.$emit('input', pruneEmptyMembers( dataMerge ))
         this.$emit('submit')
       }
       else {

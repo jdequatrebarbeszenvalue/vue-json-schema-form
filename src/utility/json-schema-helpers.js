@@ -10,11 +10,13 @@ const prune = function (input) {
         const value = prune(input[member])
         if (value !== undefined) {
           output[member] = value
+        } else {
+          output[member] = null
         }
       }
-      if (Object.keys(output).length > 0) {
+      // if (Object.keys(output).length > 0) {
         return output
-      }
+      // }
     } else {
       let output = []
       for (const member of input) {
