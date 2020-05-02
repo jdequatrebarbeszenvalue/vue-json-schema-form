@@ -4,6 +4,7 @@
 
 <script>
 import FormElementWrapper from '@/components/elements/FormElementWrapper'
+import RichTextElement from '@/components/elements/RichTextElement'
 import TextElement from '@/components/elements/TextElement'
 import TextareaElement from '@/components/elements/TextareaElement'
 import NumberElement from '@/components/elements/NumberElement'
@@ -31,6 +32,11 @@ export default {
         // currently only textarea is supported
         if (this.schema.widget === 'textarea') {
           component = TextareaElement
+        }
+
+        // CKeditor
+        if (this.schema.widget === 'richtext') {
+          component = RichTextElement
         }
 
         // possibility to load an image in base64

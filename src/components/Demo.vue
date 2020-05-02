@@ -88,6 +88,12 @@ export default {
               "example": "j-dough"
             }
           },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "A rich text",
+            "widget": "richtext"
+          },
           "address": {
             "type": "object",
             "title": "Address",
