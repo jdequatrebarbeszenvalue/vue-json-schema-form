@@ -248,6 +248,9 @@ var es6_symbol = __webpack_require__("8a81");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom.iterable.js
 var web_dom_iterable = __webpack_require__("ac6a");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es6.array.iterator.js
+var es6_array_iterator = __webpack_require__("cadf");
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.object.keys.js
 var es6_object_keys = __webpack_require__("456d");
 
@@ -271,6 +274,7 @@ function _typeof(obj) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return scaffoldFromSchema; });
 /* unused harmony export deepMerge */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return pruneEmptyMembers; });
+
 
 
 
@@ -603,6 +607,17 @@ module.exports = function (it) {
     : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
 };
 
+
+/***/ }),
+
+/***/ "245a":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RichTextElement_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("7f27");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RichTextElement_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RichTextElement_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RichTextElement_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -1773,6 +1788,13 @@ module.exports = function (it, tag, stat) {
 
 /***/ }),
 
+/***/ "7f27":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "8079":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2456,12 +2478,62 @@ module.exports = function (IS_INCLUDES) {
 
 /***/ }),
 
+/***/ "c4a9":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getTinymce; });
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+var getGlobal = function () { return (typeof window !== 'undefined' ? window : global); };
+var getTinymce = function () {
+    var global = getGlobal();
+    return global && global.tinymce ? global.tinymce : null;
+};
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
+
+/***/ }),
+
 /***/ "c69a":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__("9e1e") && !__webpack_require__("79e5")(function () {
   return Object.defineProperty(__webpack_require__("230e")('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
+
+
+/***/ }),
+
+/***/ "c8ba":
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
@@ -2902,12 +2974,12 @@ module.exports = function (O, D) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/FormElement.vue?vue&type=template&id=93470f4a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/FormElement.vue?vue&type=template&id=f956f19c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c(_vm.type,{tag:"component",attrs:{"schema":_vm.schema,"value":_vm.value},on:{"input":function($event){_vm.$emit('input', $event)}}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/elements/FormElement.vue?vue&type=template&id=93470f4a&
+// CONCATENATED MODULE: ./src/components/elements/FormElement.vue?vue&type=template&id=f956f19c&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/FormElementWrapper.vue?vue&type=template&id=bc49ad20&scoped=true&
 var FormElementWrappervue_type_template_id_bc49ad20_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('fieldset',{staticClass:"field"},[(_vm.schema.title)?_c('legend',[_vm._v(_vm._s(_vm.schema.title))]):_vm._e(),(_vm.schema.description)?_c('div',{staticClass:"content"},[_vm._v(_vm._s(_vm.schema.description))]):_vm._e(),_vm._l((_vm.schema.properties),function(child,key){return _c('form-element',{key:key,attrs:{"schema":child,"value":_vm.internalValue[key]},on:{"input":function($event){_vm.updateValue($event, key)}}})})],2)}
@@ -3079,6 +3151,412 @@ var TextareaElement_component = Object(componentNormalizer["a" /* default */])(
 
 TextareaElement_component.options.__file = "TextareaElement.vue"
 /* harmony default export */ var TextareaElement = (TextareaElement_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/RichTextElement.vue?vue&type=template&id=f62eedce&
+var RichTextElementvue_type_template_id_f62eedce_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-field',{attrs:{"label":_vm.schema.title,"message":_vm.schema.description}},[_c('Editor',{attrs:{"init":{
+       height: 500,
+       menubar: false,
+       plugins: [
+         'advlist autolink lists link image charmap print preview anchor',
+         'searchreplace visualblocks code fullscreen',
+         'insertdatetime media table paste code help wordcount'
+       ],
+       toolbar:
+         'undo redo | formatselect | bold italic backcolor | \
+         alignleft aligncenter alignright alignjustify | \
+         bullist numlist outdent indent | removeformat | help'
+     }},model:{value:(_vm.editorValue),callback:function ($$v) {_vm.editorValue=$$v},expression:"editorValue"}})],1)}
+var RichTextElementvue_type_template_id_f62eedce_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/elements/RichTextElement.vue?vue&type=template&id=f62eedce&
+
+// CONCATENATED MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/Utils.js
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+var validEvents = [
+    'onActivate',
+    'onAddUndo',
+    'onBeforeAddUndo',
+    'onBeforeExecCommand',
+    'onBeforeGetContent',
+    'onBeforeRenderUI',
+    'onBeforeSetContent',
+    'onBeforePaste',
+    'onBlur',
+    'onChange',
+    'onClearUndos',
+    'onClick',
+    'onContextMenu',
+    'onCopy',
+    'onCut',
+    'onDblclick',
+    'onDeactivate',
+    'onDirty',
+    'onDrag',
+    'onDragDrop',
+    'onDragEnd',
+    'onDragGesture',
+    'onDragOver',
+    'onDrop',
+    'onExecCommand',
+    'onFocus',
+    'onFocusIn',
+    'onFocusOut',
+    'onGetContent',
+    'onHide',
+    'onInit',
+    'onKeyDown',
+    'onKeyPress',
+    'onKeyUp',
+    'onLoadContent',
+    'onMouseDown',
+    'onMouseEnter',
+    'onMouseLeave',
+    'onMouseMove',
+    'onMouseOut',
+    'onMouseOver',
+    'onMouseUp',
+    'onNodeChange',
+    'onObjectResizeStart',
+    'onObjectResized',
+    'onObjectSelected',
+    'onPaste',
+    'onPostProcess',
+    'onPostRender',
+    'onPreProcess',
+    'onProgressState',
+    'onRedo',
+    'onRemove',
+    'onReset',
+    'onSaveContent',
+    'onSelectionChange',
+    'onSetAttrib',
+    'onSetContent',
+    'onShow',
+    'onSubmit',
+    'onUndo',
+    'onVisualAid'
+];
+var isValidKey = function (key) { return validEvents.indexOf(key) !== -1; };
+var bindHandlers = function (initEvent, listeners, editor) {
+    Object.keys(listeners)
+        .filter(isValidKey)
+        .forEach(function (key) {
+        var handler = listeners[key];
+        if (typeof handler === 'function') {
+            if (key === 'onInit') {
+                handler(initEvent, editor);
+            }
+            else {
+                editor.on(key.substring(2), function (e) { return handler(e, editor); });
+            }
+        }
+    });
+};
+var bindModelHandlers = function (ctx, editor) {
+    var modelEvents = ctx.$props.modelEvents ? ctx.$props.modelEvents : null;
+    var normalizedEvents = Array.isArray(modelEvents) ? modelEvents.join(' ') : modelEvents;
+    ctx.$watch('value', function (val, prevVal) {
+        if (editor && typeof val === 'string' && val !== prevVal && val !== editor.getContent()) {
+            editor.setContent(val);
+        }
+    });
+    editor.on(normalizedEvents ? normalizedEvents : 'change keyup undo redo', function () {
+        ctx.$emit('input', editor.getContent({ format: ctx.$props.outputFormat }));
+    });
+};
+var initEditor = function (initEvent, ctx, editor) {
+    var value = ctx.$props.value ? ctx.$props.value : '';
+    var initialValue = ctx.$props.initialValue ? ctx.$props.initialValue : '';
+    editor.setContent(value || initialValue);
+    // checks if the v-model shorthand is used (which sets an v-on:input listener) and then binds either
+    // specified the events or defaults to "change keyup" event and emits the editor content on that event
+    if (ctx.$listeners.input) {
+        bindModelHandlers(ctx, editor);
+    }
+    bindHandlers(initEvent, ctx.$listeners, editor);
+};
+var unique = 0;
+var uuid = function (prefix) {
+    var time = Date.now();
+    var random = Math.floor(Math.random() * 1000000000);
+    unique++;
+    return prefix + '_' + random + unique + String(time);
+};
+var isTextarea = function (element) {
+    return element !== null && element.tagName.toLowerCase() === 'textarea';
+};
+var normalizePluginArray = function (plugins) {
+    if (typeof plugins === 'undefined' || plugins === '') {
+        return [];
+    }
+    return Array.isArray(plugins) ? plugins : plugins.split(' ');
+};
+var mergePlugins = function (initPlugins, inputPlugins) {
+    return normalizePluginArray(initPlugins).concat(normalizePluginArray(inputPlugins));
+};
+var isNullOrUndefined = function (value) { return value === null || value === undefined; };
+
+
+// CONCATENATED MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/ScriptLoader.js
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+var createState = function () {
+    return {
+        listeners: [],
+        scriptId: uuid('tiny-script'),
+        scriptLoaded: false
+    };
+};
+var CreateScriptLoader = function () {
+    var state = createState();
+    var injectScriptTag = function (scriptId, doc, url, callback) {
+        var scriptTag = doc.createElement('script');
+        scriptTag.referrerPolicy = 'origin';
+        scriptTag.type = 'application/javascript';
+        scriptTag.id = scriptId;
+        scriptTag.src = url;
+        var handler = function () {
+            scriptTag.removeEventListener('load', handler);
+            callback();
+        };
+        scriptTag.addEventListener('load', handler);
+        if (doc.head) {
+            doc.head.appendChild(scriptTag);
+        }
+    };
+    var load = function (doc, url, callback) {
+        if (state.scriptLoaded) {
+            callback();
+        }
+        else {
+            state.listeners.push(callback);
+            if (!doc.getElementById(state.scriptId)) {
+                injectScriptTag(state.scriptId, doc, url, function () {
+                    state.listeners.forEach(function (fn) { return fn(); });
+                    state.scriptLoaded = true;
+                });
+            }
+        }
+    };
+    // Only to be used by tests.
+    var reinitialize = function () {
+        state = createState();
+    };
+    return {
+        load: load,
+        reinitialize: reinitialize
+    };
+};
+var ScriptLoader = CreateScriptLoader();
+
+
+// EXTERNAL MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/TinyMCE.js
+var TinyMCE = __webpack_require__("c4a9");
+
+// CONCATENATED MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/components/EditorPropTypes.js
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+var editorProps = {
+    apiKey: String,
+    cloudChannel: String,
+    id: String,
+    init: Object,
+    initialValue: String,
+    inline: Boolean,
+    modelEvents: [String, Array],
+    plugins: [String, Array],
+    tagName: String,
+    toolbar: [String, Array],
+    value: String,
+    disabled: Boolean,
+    tinymceScriptSrc: String,
+    outputFormat: {
+        type: String,
+        validator: function (prop) { return prop === 'html' || prop === 'text'; }
+    },
+};
+
+// CONCATENATED MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/components/Editor.js
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+
+
+
+var renderInline = function (h, id, tagName) {
+    return h(tagName ? tagName : 'div', {
+        attrs: { id: id }
+    });
+};
+var renderIframe = function (h, id) {
+    return h('textarea', {
+        attrs: { id: id },
+        style: { visibility: 'hidden' }
+    });
+};
+var initialise = function (ctx) { return function () {
+    var finalInit = __assign(__assign({}, ctx.$props.init), { readonly: ctx.$props.disabled, selector: "#" + ctx.elementId, plugins: mergePlugins(ctx.$props.init && ctx.$props.init.plugins, ctx.$props.plugins), toolbar: ctx.$props.toolbar || (ctx.$props.init && ctx.$props.init.toolbar), inline: ctx.inlineEditor, setup: function (editor) {
+            ctx.editor = editor;
+            editor.on('init', function (e) { return initEditor(e, ctx, editor); });
+            if (ctx.$props.init && typeof ctx.$props.init.setup === 'function') {
+                ctx.$props.init.setup(editor);
+            }
+        } });
+    if (isTextarea(ctx.element)) {
+        ctx.element.style.visibility = '';
+    }
+    Object(TinyMCE["a" /* getTinymce */])().init(finalInit);
+}; };
+var Editor = {
+    props: editorProps,
+    created: function () {
+        this.elementId = this.$props.id || uuid('tiny-vue');
+        this.inlineEditor = (this.$props.init && this.$props.init.inline) || this.$props.inline;
+    },
+    watch: {
+        disabled: function () {
+            this.editor.setMode(this.disabled ? 'readonly' : 'design');
+        }
+    },
+    mounted: function () {
+        this.element = this.$el;
+        if (Object(TinyMCE["a" /* getTinymce */])() !== null) {
+            initialise(this)();
+        }
+        else if (this.element && this.element.ownerDocument) {
+            var channel = this.$props.cloudChannel ? this.$props.cloudChannel : '5';
+            var apiKey = this.$props.apiKey ? this.$props.apiKey : 'no-api-key';
+            var scriptSrc = isNullOrUndefined(this.$props.tinymceScriptSrc) ?
+                "https://cdn.tiny.cloud/1/" + apiKey + "/tinymce/" + channel + "/tinymce.min.js" :
+                this.$props.tinymceScriptSrc;
+            ScriptLoader.load(this.element.ownerDocument, scriptSrc, initialise(this));
+        }
+    },
+    beforeDestroy: function () {
+        if (Object(TinyMCE["a" /* getTinymce */])() !== null) {
+            Object(TinyMCE["a" /* getTinymce */])().remove(this.editor);
+        }
+    },
+    render: function (h) {
+        return this.inlineEditor ? renderInline(h, this.elementId, this.$props.tagName) : renderIframe(h, this.elementId);
+    }
+};
+
+// CONCATENATED MODULE: ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/index.js
+/**
+ * Copyright (c) 2018-present, Ephox, Inc.
+ *
+ * This source code is licensed under the Apache 2 license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+/* harmony default export */ var ts = (Editor);
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/RichTextElement.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var RichTextElementvue_type_script_lang_js_ = ({
+  name: 'RichTextElement',
+  props: ['schema', 'value'],
+  components: {
+    Editor: ts
+  },
+  data: function data() {
+    return {
+      editorValue: this.value
+    };
+  },
+  watch: {
+    editorValue: function editorValue($event) {
+      this.$emit('input', $event);
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/elements/RichTextElement.vue?vue&type=script&lang=js&
+ /* harmony default export */ var elements_RichTextElementvue_type_script_lang_js_ = (RichTextElementvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/elements/RichTextElement.vue?vue&type=style&index=0&lang=css&
+var RichTextElementvue_type_style_index_0_lang_css_ = __webpack_require__("245a");
+
+// CONCATENATED MODULE: ./src/components/elements/RichTextElement.vue
+
+
+
+
+
+
+/* normalize component */
+
+var RichTextElement_component = Object(componentNormalizer["a" /* default */])(
+  elements_RichTextElementvue_type_script_lang_js_,
+  RichTextElementvue_type_template_id_f62eedce_render,
+  RichTextElementvue_type_template_id_f62eedce_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+RichTextElement_component.options.__file = "RichTextElement.vue"
+/* harmony default export */ var RichTextElement = (RichTextElement_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/NumberElement.vue?vue&type=template&id=11c3370a&
 var NumberElementvue_type_template_id_11c3370a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('b-field',{attrs:{"label":_vm.schema.title,"message":_vm.schema.description}},[_c('b-input',{attrs:{"type":"number","min":_vm.schema.minimum,"max":_vm.schema.maximum,"step":_vm.schema.type === 'number' ? 'any': '1',"value":_vm.value},on:{"input":function($event){_vm.$emit('input', Number($event))}}})],1)}
 var NumberElementvue_type_template_id_11c3370a_staticRenderFns = []
@@ -3464,9 +3942,6 @@ var InputImageElementvue_type_template_id_85aef61a_scoped_true_staticRenderFns =
 // CONCATENATED MODULE: ./src/components/elements/InputImageElement.vue?vue&type=template&id=85aef61a&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/elements/InputImageElement.vue?vue&type=script&lang=js&
-
-
-
 //
 //
 //
@@ -3629,6 +4104,7 @@ InputJsonFile_component.options.__file = "InputJsonFile.vue"
 
 
 
+
 /* harmony default export */ var FormElementvue_type_script_lang_js_ = ({
   name: 'FormElement',
   props: ['schema', 'value'],
@@ -3641,6 +4117,10 @@ InputJsonFile_component.options.__file = "InputJsonFile.vue"
         // currently only textarea is supported
         if (this.schema.widget === 'textarea') {
           component = TextareaElement;
+        }
+
+        if (this.schema.widget === 'richtext') {
+          component = RichTextElement;
         } // possibility to load an image in base64
 
 
@@ -3756,7 +4236,7 @@ var external_amd_ajv_commonjs_ajv_commonjs2_ajv_root_Ajv_default = /*#__PURE__*/
 var json_pointer = __webpack_require__("dc2d");
 var json_pointer_default = /*#__PURE__*/__webpack_require__.n(json_pointer);
 
-// EXTERNAL MODULE: ./src/components/elements/FormElement.vue + 64 modules
+// EXTERNAL MODULE: ./src/components/elements/FormElement.vue + 74 modules
 var FormElement = __webpack_require__("f046");
 
 // EXTERNAL MODULE: ./src/utility/json-schema-helpers.js + 1 modules

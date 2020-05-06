@@ -6,6 +6,7 @@
 import FormElementWrapper from '@/components/elements/FormElementWrapper'
 import TextElement from '@/components/elements/TextElement'
 import TextareaElement from '@/components/elements/TextareaElement'
+import RichTextElement from '@/components/elements/RichTextElement'
 import NumberElement from '@/components/elements/NumberElement'
 import SelectElement from '@/components/elements/SelectElement'
 import CheckboxElement from '@/components/elements/CheckboxElement'
@@ -31,6 +32,10 @@ export default {
         // currently only textarea is supported
         if (this.schema.widget === 'textarea') {
           component = TextareaElement
+        }
+
+        if (this.schema.widget === 'richtext') {
+          component = RichTextElement
         }
 
         // possibility to load an image in base64
