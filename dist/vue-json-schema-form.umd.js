@@ -4221,12 +4221,12 @@ if (typeof window !== 'undefined') {
 var external_amd_buefy_commonjs_buefy_commonjs2_buefy_root_Buefy_ = __webpack_require__("7a20");
 var external_amd_buefy_commonjs_buefy_commonjs2_buefy_root_Buefy_default = /*#__PURE__*/__webpack_require__.n(external_amd_buefy_commonjs_buefy_commonjs2_buefy_root_Buefy_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SchemaForm.vue?vue&type=template&id=17fdf74a&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"50c18fd5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/SchemaForm.vue?vue&type=template&id=5367cc40&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',{on:{"submit":function($event){$event.preventDefault();return _vm.submit($event)}}},[_vm._t("header",[_c('b-notification',{directives:[{name:"show",rawName:"v-show",value:(_vm.activeErrorMessages.length),expression:"activeErrorMessages.length"}],attrs:{"type":"is-danger","closable":false,"id":"error-messages"}},_vm._l((_vm.activeErrorMessages),function(error,index){return _c('div',{key:index},[_c('div',[_vm._v(_vm._s(error))])])}))],{errorMessages:_vm.activeErrorMessages}),_vm._l((_vm.schema.properties),function(property,key){return [_vm._t(key,[_c(_vm.element,{key:key,tag:"component",attrs:{"schema":property,"value":_vm.items[key]},on:{"input":function($event){_vm.updateValue($event, key)}}})],{item:{key: key, schema: property, value: _vm.items[key], update: _vm.updateValue}})]}),_vm._t("actions",[_vm._m(0)])],2)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"control"},[_c('button',{staticClass:"button is-primary",attrs:{"type":"submit"}},[_c('span',[_vm._v("Submit")])])])}]
 
 
-// CONCATENATED MODULE: ./src/components/SchemaForm.vue?vue&type=template&id=17fdf74a&
+// CONCATENATED MODULE: ./src/components/SchemaForm.vue?vue&type=template&id=5367cc40&
 
 // EXTERNAL MODULE: external {"amd":"ajv","commonjs":"ajv","commonjs2":"ajv","root":"Ajv"}
 var external_amd_ajv_commonjs_ajv_commonjs2_ajv_root_Ajv_ = __webpack_require__("b627");
@@ -4351,7 +4351,7 @@ var ajv = new external_amd_ajv_commonjs_ajv_commonjs2_ajv_root_Ajv_default.a({
     },
     updateValue: function updateValue(value, child) {
       this.items[child] = value;
-      this.$emit('input', Object(json_schema_helpers["a" /* pruneEmptyMembers */])(this.items));
+      this.$emit('input', this.items);
     }
   }
 });

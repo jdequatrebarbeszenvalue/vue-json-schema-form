@@ -96,7 +96,7 @@ export default {
     },
     updateValue (value, child) {
       this.items[child] = value
-      this.$emit('input', pruneEmptyMembers(this.items))
+      this.$emit('input', this.items)
     }
   }
 }
